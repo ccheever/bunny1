@@ -275,6 +275,10 @@ small {
 <p>
 <p>Or you can see <a href="?list">a list of shortcuts you can use</a> with this example server.</p>
 
+<h3>Running Your Own bunny1 Instance</h3>
+<ul>Get the source code from <code>http://svn.facebook.com/svnroot/bunny1/</code></ul>
+<ul>Instructions for configuring and running your own server can be found in the <a href="http://svn.facebook.com/svnroot/bunny1/src/README">README</a>.</ul>
+
 <h3>Installing on Firefox</h3>
 <ul>Type <code>about:config</code> into your location bar in Mozilla.</ul>
 <ul>Set the value of keyword.URL to be <code>""" + self._base_url() + """?</code></ul>
@@ -297,7 +301,7 @@ small {
 <ul>Or, in IE7+, you can click the down arrow on the search bar to the right of your location bar and choose the starred """ + name + """ option there.  This will install the bunny OpenSearch plugin in your search bar.</ul>
 
 <hr />
-<small>bunny1 was originally written by <a href="http://www.facebook.com/people/Charlie-Cheever/1160">Charlie Cheever</a> and is maintained by him, <a href="http://www.facebook.com/people/David-Reiss/626221207">David Reiss</a>, Eugene Letuchy, and <a href="http://www.facebook.com/people/Daniel-Corson/708561">Dan Corson</a>.</small>
+<small>bunny1 was originally written by <a href="http://www.facebook.com/people/Charlie-Cheever/1160">Charlie Cheever</a> at <a href="http://developers.facebook.com/opensource.php">Facebook</a> and is maintained by him, <a href="http://www.facebook.com/people/David-Reiss/626221207">David Reiss</a>, Eugene Letuchy, and <a href="http://www.facebook.com/people/Daniel-Corson/708561">Dan Corson</a>.  Julie Zhuo drew the bunny logo.</small>
 
 
 </body>
