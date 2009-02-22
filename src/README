@@ -1,0 +1,56 @@
+bunny1
+
+Copyright (c) 2007-2009, Facebook Inc.
+
+bunny1 is a tool that lets you write smart bookmarks in python and then 
+ share them across all your browsers and with a group of people or the 
+ whole world. It was developed at Facebook and is widely used there.
+
+To install bunny1, run
+   sudo setup.py build install
+
+To get started, run the example.py script that will be under 
+ build/scripts-<version>/
+   ./example.py
+
+If you need to change the port that the server is running on (the default is
+ 9084), then you can use the --port option, ex.
+   ./example .py --port=8080
+
+You can see other command-line options by running ./example.py --help
+
+The server should then tell you where it is running.  If you visit that URL,
+ you should see a help page for bunny1 that explains how to configure your 
+ browser to work with the server.
+
+If it isn't easy to run a standalone server in your environment 
+ (ex. DreamHost or most other shared hosting environments), then you can 
+ just use example.py or barebones.py or a similar script as a CGI.
+
+To setup your own commands, the easiest way to start is by taking either the 
+ example.py script or the barebones.py script and editing it.  example.py 
+ includes a bunch of examples of the different kinds of things you can do,
+ and is a good place to start reading if you're interested in what special
+ features are available.  If you just want  something simple to get started, 
+ the barebones.py script is the most stripped-down and straightforward, and 
+ it works well if you want to just copy something and modify it to make your
+ own server.
+
+bunny1 requires CherryPy 3.1.0 or newer and python2.4 or python2.5.
+bunny1 does not currently work with python2.6.
+
+The original author of bunny1 is Charlie Cheever.  David Reiss and
+ Dan Corson and Will Chen and Chris Piro and Eugene Letuchy and Luke Shepard
+ and others contributed ideas and code and support.  Julie Zhuo made the
+ blob bunny logo.
+
+The original idea for bunny1 came from yubnub.org.  Ubiquity from 
+ Mozilla Labs is a similar tool that is very powerful and worth checking 
+ out if you are a Firefox user.
+
+You can send feedback and bug reports to bunny1-feedback@lists.facebook.com .
+
+    -- ccheever
+
+
+
