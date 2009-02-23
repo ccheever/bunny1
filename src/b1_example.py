@@ -262,10 +262,10 @@ small {
 
 <p>Or you can see <a href="?list">a list of shortcuts you can use</a> with this example server.</p>
 
-<h3>Running Your Own bunny1 Instance</h3>
-<ul>Download the source code from <a href="http://github.com/ccheever/bunny1/">the git repository</a>: <code>git clone git://github.com/ccheever/bunny1.git</code></ul>
+<h3>Running Your Own bunny1 Server</h3>
+<ul>Download the <a href="http://github.com/ccheever/bunny1/">source code</a> for the project.</ul>
 
-<ul>Instructions for configuring and running your own server can be found in the <a href="http://svn.facebook.com/svnroot/bunny1/src/README">README</a>.</ul>
+<ul>Instructions for configuring and running your own server can be found in the <a href="http://www.bunny1.org/?readme">README</a>.  You can add your own commands with just a few lines of python.</ul>
 
 <h3>Installing on Firefox</h3>
 <ul>Type <code>about:config</code> into your location bar in Mozilla.</ul>
@@ -289,7 +289,7 @@ small {
 <ul>Or, in IE7+, you can click the down arrow on the search bar to the right of your location bar and choose the starred """ + name + """ option there.  This will install the bunny OpenSearch plugin in your search bar.</ul>
 
 <hr />
-<small>bunny1 was originally written by <a href="http://www.facebook.com/people/Charlie-Cheever/1160">Charlie Cheever</a> at <a href="http://developers.facebook.com/opensource.php">Facebook</a> and is maintained by him, <a href="http://www.facebook.com/people/David-Reiss/626221207">David Reiss</a>, Eugene Letuchy, and <a href="http://www.facebook.com/people/Daniel-Corson/708561">Dan Corson</a>.  Julie Zhuo drew the bunny logo and <a href="http://www.facebook.com/people/Rob-Goodlatte/1305210">Rob Goodlatte</a> designed the banner.</small>
+<small>bunny1 was originally written by <a href="http://www.facebook.com/people/Charlie-Cheever/1160">Charlie Cheever</a> at <a href="http://developers.facebook.com/opensource.php">Facebook</a> and is maintained by him, <a href="http://www.facebook.com/people/David-Reiss/626221207">David Reiss</a>, Eugene Letuchy, and <a href="http://www.facebook.com/people/Daniel-Corson/708561">Dan Corson</a>.  Julie Zhuo drew the bunny logo.</small>
 
 
 </body>
