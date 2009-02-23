@@ -228,55 +228,43 @@ A {
     color: #3B5998;
 }
 
-H1 {
-    width: 800px;
-    background: #3B5998;
-    color: white;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-bottom: 3px;
-    padding-top: 23px;
-    font-weight: bold;
-    vertical-align: bottom;
-}
-
 small {
     width: 800px;
     text-align: center;
 }
 
-.bunny1-logo {
-    height: 32px;
-    vertical-align: bottom;
-    margin-right: 8px;
-}
-
-.facebook-logo {
+.header {
     position: absolute;
-    top: 20px;
-    left: 660px;
+    top: 0px;
+    left: 0px;
 }
 
 .test-query-input {
-    width: 400px;
+    width: 487px;
+    font-size: 20px;
+}
+
+.header-placeholder {
+    height: 45px;
 }
 
 </style>
 </head>
 <body>
-<h1><img class="bunny1-logo" src="blobbunny.gif">""" + name + """<img class="facebook-logo" src="http://www.facebook.com/images/facebook.gif" /></h1>
+<h1 class="header-placeholder"><img class="header" src="header.gif" /></h1>
 
 <p>""" + name + """ is a tool that lets you write smart bookmarks in python and then share them across all your browsers and with a group of people or the whole world.  It was developed at <a href="http://www.facebook.com/">Facebook</a> and is widely used there.</p>
 
 <form method="GET">
+<p style="width: 820px; text-align: center;"><input class="test-query-input" id="b1cmd" type="text" name="___" value=""" + '"' + escape(random.choice(examples)) + '"' + """/> <input type="submit" value=" try me "/></p>
+
 <p>Type something like """ + " or ".join(["""<a href="#" onclick="return false;"><code onclick="document.getElementById('b1cmd').value = this.innerHTML; return true;">""" + x + "</code></a>" for x in examples]) + """.</p>
-<input class="test-query-input" id="b1cmd" type="text" name="___" value=""" + '"' + escape(random.choice(examples)) + '"' + """/><input type="submit" value=" try me "/>
-</p>
-<p>
+
 <p>Or you can see <a href="?list">a list of shortcuts you can use</a> with this example server.</p>
 
 <h3>Running Your Own bunny1 Instance</h3>
-<ul>Get the source code from <code>http://svn.facebook.com/svnroot/bunny1/</code></ul>
+<ul>Download the source code from <a href="http://github.com/ccheever/bunny1/">the git repository</a>: <code>git clone git://github.com/ccheever/bunny1.git</code></ul>
+
 <ul>Instructions for configuring and running your own server can be found in the <a href="http://svn.facebook.com/svnroot/bunny1/src/README">README</a>.</ul>
 
 <h3>Installing on Firefox</h3>
@@ -301,7 +289,7 @@ small {
 <ul>Or, in IE7+, you can click the down arrow on the search bar to the right of your location bar and choose the starred """ + name + """ option there.  This will install the bunny OpenSearch plugin in your search bar.</ul>
 
 <hr />
-<small>bunny1 was originally written by <a href="http://www.facebook.com/people/Charlie-Cheever/1160">Charlie Cheever</a> at <a href="http://developers.facebook.com/opensource.php">Facebook</a> and is maintained by him, <a href="http://www.facebook.com/people/David-Reiss/626221207">David Reiss</a>, Eugene Letuchy, and <a href="http://www.facebook.com/people/Daniel-Corson/708561">Dan Corson</a>.  Julie Zhuo drew the bunny logo.</small>
+<small>bunny1 was originally written by <a href="http://www.facebook.com/people/Charlie-Cheever/1160">Charlie Cheever</a> at <a href="http://developers.facebook.com/opensource.php">Facebook</a> and is maintained by him, <a href="http://www.facebook.com/people/David-Reiss/626221207">David Reiss</a>, Eugene Letuchy, and <a href="http://www.facebook.com/people/Daniel-Corson/708561">Dan Corson</a>.  Julie Zhuo drew the bunny logo and <a href="http://www.facebook.com/people/Rob-Goodlatte/1305210">Rob Goodlatte</a> designed the banner.</small>
 
 
 </body>
@@ -387,6 +375,16 @@ class ExampleBunny(bunny1.Bunny1):
     """An example"""
     def __init__(self):
         bunny1.Bunny1.__init__(self, ExampleCommands(), ExampleDecorators())
+
+    # an example showing how you can handle URLs that happen before 
+    # the querystring by adding methods to the Bunny class instead of 
+    # the commands class
+    @cherrypy.expose
+    def header_gif(self):
+        """the banner GIF for the bunny1 homepage"""
+        cherrypy.response.headers["Content-Type"] = "image/gif"
+        return bunny1.bunny1_file("header.gif")
+
 
 if __name__ == "__main__":
     bunny1.main(ExampleBunny())
