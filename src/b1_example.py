@@ -1,9 +1,10 @@
-#!/usr/local/bin/python2.5
+#!/usr/bin/python
 
 __author__ = "ccheever"
 __doc__ = """
 An example bunny1 server with some common commands that you might want to use.
 """
+__version__ = "1.1"
 
 import urlparse
 import subprocess
@@ -263,14 +264,14 @@ small {
 <p>Or you can see <a href="?list">a list of shortcuts you can use</a> with this example server.</p>
 
 <h3>Running Your Own bunny1 Server</h3>
-<ul>Download the <a href="http://github.com/ccheever/bunny1/">source code</a> for the project.  Or if you use setuptools, you can just <code>easy_install-2.5 bunny1</code>.</ul>
+<ul>Download the <a href="http://github.com/ccheever/bunny1/">source code</a> for the project.  Or if you use setuptools, you can just <code>easy_install bunny1</code>.</ul>
 
 <ul>To run an example server, just run <code>b1_example.py --port=8080</code>.</ul>
 
 <ul>More detailed instructions for configuring and running your own server can be found in the <a href=""" + '"' + self._base_url() + """?readme">README</a>.  You can add your own commands with just a few lines of python.</ul>
 
 <h3>Installing on Firefox</h3>
-<ul>Type <code>about:config</code> into your location bar in Mozilla.</ul>
+<ul>Type <code>about:config</code> into your location bar in Firefox.</ul>
 <ul>Set the value of keyword.URL to be <code>""" + self._base_url() + """?</code></ul>
 <ul>Make sure you include the <code>http://</code> at the beginning and the <code>?</code> at the end.</ul>
 <ul>Now, type <code>list</code> or <code>_source</code> into your location bar and hit enter.</ul>
