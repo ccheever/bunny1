@@ -500,7 +500,7 @@ class Bunny1Commands(object):
 
     def _source(self, arg):
         """goes to the source code for bunny1 (this utility)"""
-        return "http://svn.facebook.com/svnroot/bunny1/"
+        return "http://github.com/ccheever/bunny1/tree/master"
 
     def _test(self, arg):
         """tests a command on a different bunny1 host.  usage: _test [fully-qualified-bunny1-url] [command]"""
