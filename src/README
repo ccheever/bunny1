@@ -11,11 +11,11 @@ To install bunny1, run
 
 To get started, run the example.py script that will be under 
  build/scripts-<version>/
-   ./example.py
+   b1_example.py
 
 If you need to change the port that the server is running on (the default is
  9084), then you can use the --port option, ex.
-   ./example .py --port=8080
+   b1_example .py --port=8080
 
 You can see other command-line options by running ./example.py --help
 

@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/local/bin/python2.5
 
 __author__ = "ccheever"
 __doc__ = """
@@ -263,9 +263,11 @@ small {
 <p>Or you can see <a href="?list">a list of shortcuts you can use</a> with this example server.</p>
 
 <h3>Running Your Own bunny1 Server</h3>
-<ul>Download the <a href="http://github.com/ccheever/bunny1/">source code</a> for the project.</ul>
+<ul>Download the <a href="http://github.com/ccheever/bunny1/">source code</a> for the project.  Or if you use setuptools, you can just <code>easy_install-2.5 bunny1</code>.</ul>
 
-<ul>Instructions for configuring and running your own server can be found in the <a href="http://www.bunny1.org/?readme">README</a>.  You can add your own commands with just a few lines of python.</ul>
+<ul>To run an example server, just run <code>b1_example.py --port=8080</code>.</ul>
+
+<ul>More detailed instructions for configuring and running your own server can be found in the <a href=""" + '"' + self._base_url() + """?readme">README</a>.  You can add your own commands with just a few lines of python.</ul>
 
 <h3>Installing on Firefox</h3>
 <ul>Type <code>about:config</code> into your location bar in Mozilla.</ul>

@@ -3,7 +3,7 @@ from setuptools import setup
 
 setup(
     name="bunny1",
-    version="1.0",
+    version="1.1",
     description="bunny1 is a tool that lets you write smart bookmarks in " +
         "python and then share them across all your browsers and with a " +
         "group of people or the whole world.",
