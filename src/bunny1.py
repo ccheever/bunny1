@@ -253,7 +253,9 @@ class Bunny1(object):
             cherrypy.config["log.error_file"] = errorlogfile
         if accesslogfile:
             cherrypy.config["log.access_file"] = accesslogfile
-        if not host:
+        if host:
+            cherrypy.server.socket_host = host
+        else:
             from socket import gethostname
             cherrypy.server.socket_host = gethostname()
         return cherrypy.quickstart(self)
