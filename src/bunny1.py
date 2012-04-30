@@ -170,7 +170,7 @@ class Bunny1(object):
             try:
                 return self.do_command(arg)
             except HTTPRedirect, redir:
-                url = redir.urls[0]
+                url = escape(redir.urls[0])
                 return "<code><b>bunny1</b> DEBUG: redirect to <a href='%s'>%s</a></code>" % (url, url)
 
         # we don't want people calling things like __str__, etc.
