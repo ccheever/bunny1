@@ -444,10 +444,6 @@ class Bunny1Commands(object):
         """returns back what you give to it"""
         raise Content(escape(arg))
 
-    def html(self, arg):
-        """returns back the literal HTML you give it"""
-        raise Content(arg)
-
     def g(self, arg):
         """does a google search.  we could fallback to yubnub, but why do an unnecessary roundtrip for something as common as a google search?"""
         return GOOGLE_SEARCH_URL + q(arg)
