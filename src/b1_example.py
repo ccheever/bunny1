@@ -110,6 +110,13 @@ class ExampleCommands(bunny1.Bunny1Commands):
         else:
             return "http://www.congress.org/congressorg/officials/congress/"
 
+    def wa(self, arg):
+        """Searches Wolfram Alpha or goes there"""
+        if arg:
+            return "http://www.wolframalpha.com/input/?i=%s" % qp(arg)
+        else:
+            return "http://www.wolframalpha.com/"
+
     def wikinvest(self, arg):
         """Searches Wikinvest or goes there"""
         if arg:
